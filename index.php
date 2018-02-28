@@ -155,10 +155,6 @@
                         <input type="text" class="form-control" id="firstName" placeholder="FirstName">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">MIddle Name</label>
-                        <input type="text" class="form-control" id="MiddleName" placeholder="MIddleName">
-                    </div>
-                    <div class="form-group">
                         <label for="exampleInputPassword1">Last Name</label>
                         <input type="text" class="form-control" id="lastName" placeholder="LastName">
                     </div>
