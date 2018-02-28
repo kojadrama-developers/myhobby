@@ -1,0 +1,16 @@
+html, body {
+    height:100%;
+    margin:0;
+    padding:0;
+}
+.carousel, .item, .active {
+    height:100%;
+}
+.carousel-inner {
+    height:100%;
+}
+#aboutReg{
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+}
