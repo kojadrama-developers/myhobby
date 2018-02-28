@@ -152,7 +152,11 @@
                 <form>
                     <div class="form-group">
                         <label for="exampleInputPassword1">First Name</label>
-                        <input type="text" class="form-control" id="firstNmae" placeholder="FirstName">
+                        <input type="text" class="form-control" id="firstName" placeholder="FirstName">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">MIddle Name</label>
+                        <input type="text" class="form-control" id="MiddleName" placeholder="MIddleName">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Last Name</label>
