@@ -153,32 +153,24 @@
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">First Name</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="FirstName">
+                        <input type="text" class="form-control" id="firstName" placeholder="First Name">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Last Name</label>
-                        <input type="text" class="form-control" id="lastName" placeholder="LastName">
+                        <input type="text" class="form-control" id="lastName" placeholder="Last Name">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
                         <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
                         <input type="password" class="form-control" id="password" placeholder="Password">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirmPassword" placeholder="ConfirmPassword">
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
                     </div>
                     <div class="form-group">
-                        <label class="example-date-input">Date of birth</label>
                         <input type="date" class="form-control" id="date">
                     </div>
-                    Sex:
                     <div class="form-check">
-
                         <label class="form-check form-check-inline">
                         <input type="radio" class="form-check-input" id="radio1" name="radio" value="Male" id="inlineRadio1"> Male
                         </label>
