@@ -16,13 +16,15 @@
 
 
 
+
+
     <title>MyHobby</title>
 </head>
 <body>
 
 <!--Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">LOGO<!--<img src="img/logo/logo.png">--></a>
+    <a class="navbar-brand" href="#"><img width="100" src="img/logo/logo.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -108,7 +110,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Sign in</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -174,10 +176,15 @@
                         <label class="example-date-input">Date of birth</label>
                         <input type="date" class="form-control" id="date">
                     </div>
+                    Sex:
                     <div class="form-check">
-                        <label class="form-check-label">Sex</label><br/>
-                        <input type="radio" class="form-check-input" id="radio1" name="radio" value="Male">Male<br/>
-                        <input type="radio" class="form-check-input" id="radio2" name="radio" value="Female">Female
+
+                        <label class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="radio1" name="radio" value="Male" id="inlineRadio1"> Male
+                        </label>
+                        <label class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="radio2" name="radio" value="Female" id="inlineRadio2"> Female
+                        </label>
                     </div>
                     <button type="submit" class="btn btn-primary">Register</button>
                     <button type="reset" class="btn btn-danger" data-dismiss="modal">Cancel</button>
