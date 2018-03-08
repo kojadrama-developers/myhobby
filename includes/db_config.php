@@ -1,11 +1,28 @@
 <?php
+class Database{
+    private $host = 'localhost';
+    private $db_name = 'myhobby-test';
+    private $username = 'root';
+    private $password = '';
+    public $connection;
 
-define("DB_HOST","localhost");
-define("DB_USER","root");
-define("DB_PASS","");
-define("DB_NAME","myhobby-test");
+    public function dbConnection()
+    {
+        $this -> connection = null;
 
-$connection = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME);
-if($connection){
-    echo "Connected";
+        try{
+            $this -> connection = new PDO("mysql:host=". $this->host . ";dbname=" . $this->db_name , $this->username , $this->password);
+            $this -> connection -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+        }
+        catch (PDOException $exception){
+            echo "Connection error " .$exception ->getMessage();
+        }
+
+        return $this->connection;
+    }
+
+
 }
+
+
+?>
