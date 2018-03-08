@@ -2,37 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15df1c99-602c-4375-a7b8-d297cf4ee21f" name="Default" comment="aaa">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/e2882c24-ba13-429d-8c7c-4a8df56d3f4f.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/myhobby.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/aboutus.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/admin/index.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/admin/list.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/contact.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/css/custom.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/foto.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/knjiga.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/logo/logo.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/img/mapa.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/includes/carousel.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/includes/db_config.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/includes/footer.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/includes/header.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/includes/navigation.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/includes/registrationmodal.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/includes/signinmodal.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/index.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/user/login.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/user/logout.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/user/registration.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/user/session.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/user/user.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -82,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/aaa.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+              <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -98,6 +68,11 @@
     </option>
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -124,6 +99,7 @@
         <option value="$PROJECT_DIR$/includes/user.php" />
         <option value="$PROJECT_DIR$/user/function.php" />
         <option value="$PROJECT_DIR$/includes/navigation.php" />
+        <option value="$PROJECT_DIR$/aaa.php" />
       </list>
     </option>
   </component>
@@ -240,7 +216,7 @@
       <workItem from="1520422275774" duration="11276000" />
       <workItem from="1520436295544" duration="729000" />
       <workItem from="1520506740372" duration="50000" />
-      <workItem from="1520506920735" duration="986000" />
+      <workItem from="1520506920735" duration="1402000" />
     </task>
     <task id="LOCAL-00001" summary="aaa">
       <created>1520507709699</created>
@@ -256,11 +232,32 @@
       <option name="project" value="LOCAL" />
       <updated>1520507858747</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="aaa">
+      <created>1520507928520</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1520507928520</updated>
+    </task>
+    <task id="LOCAL-00004" summary="aaa">
+      <created>1520508099873</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1520508099873</updated>
+    </task>
+    <task id="LOCAL-00005" summary="aaa">
+      <created>1520508255382</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1520508255382</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22448000" />
+    <option name="totallyTimeSpent" value="22864000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -617,7 +614,7 @@
     <entry file="file://$PROJECT_DIR$/aaa.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding />
         </state>
       </provider>
