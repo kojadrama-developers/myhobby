@@ -18,7 +18,7 @@ class Admin extends Database {
             echo "<a href='insert_category.php'>Add new category</a><br/>";
             echo "<a href='insert_subcategory.php'>Add new subcategory</a><br/>";
             while ($row1 = $list->fetch(PDO::FETCH_BOTH)) {
-                echo "<b>".$row1[0].$row1["category_name"]."</b>"."<a href='delete_category.php?id=".$row1[0]."'>Delete</a><a href='update_category.php?id=".$row1[0]."'>Update</a><br/>";
+                echo "<b>".$row1[0].". ".$row1["category_name"]."</b>"."<a href='delete_category.php?id=".$row1[0]."'>Delete</a><a href='update_category.php?id=".$row1[0]."'>Update</a><br/>";
                 $list1=$this->connection->query("SELECT * FROM `myhobby-test`.sub_category
                                                   JOIN category sc ON sc.category_id = sub_category.id_category WHERE id_category='".$row1[0]."'");
                 while ($row2 = $list1->fetch(PDO::FETCH_BOTH)) {
