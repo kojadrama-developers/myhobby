@@ -15,8 +15,10 @@ class Admin extends Database {
         $list=$this->connection->query("SELECT * FROM `myhobby-test`.category");
 
         if($list->rowCount()>0) {
+            echo "<a href='insert_category.php'>Add new category</a><br/>";
+            echo "<a href='insert_subcategory.php'>Add new subcategory</a><br/>";
             while ($row1 = $list->fetch(PDO::FETCH_BOTH)) {
-                echo "<b>".$row1["category_name"]."</b>"."<a href='delete_category.php?id=".$row1[0]."'>Delete</a><a href='update_category.php?id=".$row1[0]."'>Update</a><br/>";
+                echo "<b>".$row1[0].$row1["category_name"]."</b>"."<a href='delete_category.php?id=".$row1[0]."'>Delete</a><a href='update_category.php?id=".$row1[0]."'>Update</a><br/>";
                 $list1=$this->connection->query("SELECT * FROM `myhobby-test`.sub_category
                                                   JOIN category sc ON sc.category_id = sub_category.id_category WHERE id_category='".$row1[0]."'");
                 while ($row2 = $list1->fetch(PDO::FETCH_BOTH)) {
@@ -59,10 +61,30 @@ class Admin extends Database {
         if(isset($btn_update))
         {
             $update=$this->connection->query("UPDATE `myhobby-test`.sub_category SET sub_category_name='$new_name' WHERE subcategory_id='$id'");
-            header("Refresh:0;url=index.php");
+
             return $update;
         }
     }
 
+    public function insert_category($new_name,$btn_insert)
+    {
+        if(isset($btn_insert))
+        {
+            $insert=$this->connection->query("INSERT INTO `myhobby-test`.category (category_name) VALUE ('$new_name')");
+            header("Refresh:0;url=index.php");
+            return $insert;
+        }
 
+    }
+
+    public function insert_subcategory($new_name,$btn_insert,$category_id)
+    {
+        if(isset($btn_insert))
+        {
+            $insert=$this->connection->query("INSERT INTO `myhobby-test`.sub_category (id_category,sub_category_name) VALUE ('$category_id','$new_name')");
+            header("Refresh:0;url=index.php");
+            return $insert;
+        }
+
+    }
 }
