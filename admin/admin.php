@@ -61,7 +61,7 @@ class Admin extends Database {
         if(isset($btn_update))
         {
             $update=$this->connection->query("UPDATE `myhobby-test`.sub_category SET sub_category_name='$new_name' WHERE subcategory_id='$id'");
-
+            header("Refresh:0;url=index.php");
             return $update;
         }
     }
@@ -87,4 +87,39 @@ class Admin extends Database {
         }
 
     }
+
+    public function select_users()
+    {
+        $list1=$this->connection->query("SELECT * FROM `myhobby-test`.users");
+        if($list1->rowCount()>0)
+        {
+            while($row=$list1->fetch(PDO::FETCH_BOTH))
+            {
+                echo $row[1]." ".$row[2]." "."<a href='delete_users.php?id=".$row[0]."'>Delete</a>"." "."<a href='update_users.php?id=".$row[0]."'>Update</a>"."<br/>";
+            }
+        }
+
+    }
+
+    public function delete_users()
+    {
+        $id=$_GET['id'];
+        $delete=$this->connection->query("DELETE FROM `myhobby-test`.users WHERE user_id='$id'");
+        header("Refresh:0;url=index.php");
+        return $delete;
+    }
+
+    public function update_users($new_first_name,$new_last_name,$btn_update)
+    {
+        $id=$_GET['id'];
+        if(isset($btn_update))
+        {
+            $update=$this->connection->query("UPDATE `myhobby-test`.users SET first_name='$new_first_name', last_name='$new_last_name' WHERE user_id='$id'");
+            header("Refresh:0;url=index.php");
+            return $update;
+
+        }
+    }
+
+
 }
