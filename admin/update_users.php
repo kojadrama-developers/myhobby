@@ -9,8 +9,10 @@
 </head>
 <body>
 <form action="" method="post">
-    <input type="text" name="new_first_name">
-    <input type="text" name="new_last_name">
+    <label>New first name: </label>
+    <input type="text" name="new_first_name"><br/><br/>
+    <label>New last name: </label>
+    <input type="text" name="new_last_name"><br/><br/>
     <input type="submit" name="btn_update">
     <input type="reset">
 </form>
@@ -19,8 +21,8 @@
 <?php
 include "admin.php";
 $user=new Admin();
-$new_first_name=$_POST['new_first_name'];
-$new_last_name=$_POST['new_last_name'];
-$btn_update=$_POST['btn_update'];
+$new_first_name=!empty($_POST['new_first_name']) ? $_POST['new_first_name'] : '';
+$new_last_name=!empty($_POST['new_last_name']) ? $_POST['new_last_name'] : '';
+$btn_update=!empty($_POST['btn_update']) ? $_POST['btn_update'] : '';
 $update=$user->update_users($new_first_name,$new_last_name,$btn_update);
 ?>

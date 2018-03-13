@@ -9,8 +9,10 @@
 </head>
 <body>
 <form action="" method="post">
-    <input type="number" name="category_id">
-    <input type="text" name="new_name">
+    <label>Category id: </label>
+    <input type="number" name="category_id"><br/><br/>
+    <label>New subcategory name: </label>
+    <input type="text" name="new_name"><br/><br/>
     <input type="submit" name="btn_insert">
     <input type="reset">
 </form>
@@ -19,8 +21,8 @@
 <?php
 include "admin.php";
 $hobby=new Admin();
-$category_id=$_POST['category_id'];
-$btn_insert=$_POST['btn_insert'];
-$new_name=$_POST['new_name'];
+$category_id=!empty($_POST['category_id']) ? $_POST['category_id'] : '';
+$new_name=!empty($_POST['new_name']) ? $_POST['new_name'] : '';
+$btn_insert=!empty($_POST['btn_insert']) ? $_POST['btn_insert'] : '';
 $update=$hobby->insert_subcategory($new_name,$btn_insert,$category_id);
 ?>

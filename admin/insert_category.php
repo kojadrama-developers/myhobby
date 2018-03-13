@@ -9,7 +9,8 @@
 </head>
 <body>
 <form action="" method="post">
-    <input type="text" name="new_name">
+    <label>New category name: </label>
+    <input type="text" name="new_name"><br/><br/>
     <input type="submit" name="btn_insert">
     <input type="reset">
 </form>
@@ -18,7 +19,7 @@
 <?php
 include "admin.php";
 $hobby=new Admin();
-$btn_insert=$_POST['btn_insert'];
-$new_name=$_POST['new_name'];
+$new_name=!empty($_POST['new_name']) ? $_POST['new_name'] : '';
+$btn_insert=!empty($_POST['btn_insert']) ? $_POST['btn_insert'] : '';
 $update=$hobby->insert_category($new_name,$btn_insert);
 ?>
