@@ -16,19 +16,19 @@ class Admin extends Database {
     {
         $list=$this->connection->query("SELECT * FROM `myhobby-test`.category");
 
-        echo "<h2 class='bg-dark manage'>Manage hobbies here:</h2>";
-        echo "<div id='hobbies'><table class='table table-dark table-hover'>";
-        echo "<tr><td></td><td class='align'><button type='button' class='btn btn-success btn-lg' data-toggle='modal' data-target='#category_modal'>Add new category</button></td></tr>";
+        echo "";
+        echo "<table class='table table-dark table-hover'>";
+        echo "<tr><td><h2 class='manage'>Manage hobbies here:</h2></td><td class='align'><button type='button' class='btn btn-success btn-lg' data-toggle='modal' data-target='#category_modal'>Add new category</button></td></tr>";
         if($list->rowCount()>0) {
             while ($row1 = $list->fetch(PDO::FETCH_BOTH)) {
-                echo "<tr class='bg-dark font-weight-bold'><td class='cell-hobby'>".$row1[1]."</td><td class='cell-hobby align'><a class='btn btn-success btn-spacing' href='insert_subcategory.php?id=".$row1[0]."'>New</a><a class='btn btn-primary btn-spacing' href='update_category.php?id=".$row1[0]."'>Update</a><a class='btn btn-danger' href='delete_category.php?id=".$row1[0]."'>Delete</a></td></tr>";
+                echo "<tr class='bg-dark font-weight-bold'><td class='cell-hobby'><p id='category'>".$row1[1]."</p></td><td class='cell-hobby align'><a class='btn btn-success btn-spacing' href='insert_subcategory.php?id=".$row1[0]."'>New</a><a class='btn btn-primary btn-spacing' href='update_category.php?id=".$row1[0]."'>Update</a><a class='btn btn-danger' href='delete_category.php?id=".$row1[0]."'>Delete</a></td></tr>";
                 $list1=$this->connection->query("SELECT * FROM `myhobby-test`.sub_category JOIN category sc ON sc.category_id = sub_category.id_category WHERE id_category='".$row1[0]."'");
                 while ($row2 = $list1->fetch(PDO::FETCH_BOTH)) {
-                    echo "<tr><td class='cell-hobby'>".$row2[2]."</td><td class='cell-hobby align'><a class='btn btn-primary btn-spacing' href='update_subcategory.php?id=".$row2[0]."'>Update</a><a class='btn btn-danger' href='delete_subcategory.php?id=".$row2[0]."'>Delete</a></td></tr>";
+                    echo "<tr><td class='cell-hobby'><p id='subcategory'>".$row2[2]."</p></td><td class='cell-hobby align'><a class='btn btn-primary btn-spacing' href='update_subcategory.php?id=".$row2[0]."'>Update</a><a class='btn btn-danger' href='delete_subcategory.php?id=".$row2[0]."'>Delete</a></td></tr>";
                 }
             }
         }
-        echo "</table></div>";
+        echo "</table>";
     }
 
     public function delete_category()
@@ -138,11 +138,11 @@ class Admin extends Database {
 
     public function select_users()
     {
-        echo "<h2 class='bg-dark manage'>Manage users here:</h2>";
-
         $list1=$this->connection->query("SELECT * FROM `myhobby-test`.users");
-        echo "<div id='users'><table class='table table-dark' ";
-        echo "<th><td>First name</td><td>Last name</td><td>E-mail</td><td class='align'>Manage</td></th>";
+
+        echo "<table class='table table-dark'>";
+        echo "<tr><td colspan='4'><h2>Manage users here:</h2></td></tr>";
+        echo "<tr><td>First name</td><td>Last name</td><td>E-mail</td><td class='align'>Manage</td></tr>";
         if($list1->rowCount()>0)
         {
             while($row=$list1->fetch(PDO::FETCH_BOTH))
@@ -150,7 +150,7 @@ class Admin extends Database {
                 echo "<tr><td class='cell-user'>".$row[1]."</td><td class='cell-user'>".$row[2]."</td>"."<td class='cell-user'>".$row[3]."</td><td class='cell-user align'><a class='btn btn-primary btn-spacing' href='update_users.php?id=".$row[0]."'>Update</a><a class='btn btn-danger' href='delete_users.php?id=".$row[0]."'>Delete</a></td>";
             }
         }
-        echo "</table></div>";
+        echo "</table>";
     }
 
     public function delete_users()

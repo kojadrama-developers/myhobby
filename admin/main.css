@@ -21,3 +21,9 @@ td.align{
     left: 50%;
     margin: -100px 0 0 -150px;
 }
+#category{
+    font-size: 25px;
+}
+#subcategory{
+    font-size: 15px;
+}
