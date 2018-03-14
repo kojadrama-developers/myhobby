@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15df1c99-602c-4375-a7b8-d297cf4ee21f" name="Default" comment="Admin">
+    <list default="true" id="15df1c99-602c-4375-a7b8-d297cf4ee21f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/admin/admin.php" afterPath="$PROJECT_DIR$/admin/admin.php" />
     </list>
@@ -29,19 +29,20 @@
       <file leaf-file-name="admin.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="46" column="3" lean-forward="false" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
+            <state relative-caret-position="340">
+              <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
               <folding>
-                <marker date="1521027696535" expanded="true" signature="310:347" ph="SELECT * FRO... category" />
-                <marker date="1521027696535" expanded="true" signature="838:1024" ph="SELECT * FRO... sub_category" />
-                <marker date="1521027696535" expanded="true" signature="1437:1496" ph="DELETE FROM `myhobby-test`.category... " />
-                <marker date="1521027696535" expanded="true" signature="1871:1955" ph="UPDATE `myhobby-test`.category... " />
-                <marker date="1521027696535" expanded="true" signature="2375:2470" ph="UPDATE `myhobby-test`.sub_category... " />
-                <marker date="1521027696535" expanded="true" signature="2862:2933" ph="INSERT INTO `myhobby-test`.category... " />
-                <marker date="1521027696535" expanded="true" signature="3342:3448" ph="INSERT INTO `myhobby-test`.sub_category... " />
-                <marker date="1521027696535" expanded="true" signature="3770:3804" ph="SELECT * FRO... users" />
-                <marker date="1521027696535" expanded="true" signature="4228:4280" ph="DELETE FROM `myhobby-test`.users... " />
-                <marker date="1521027696535" expanded="true" signature="4668:4776" ph="UPDATE `myhobby-test`.users... " />
+                <marker date="1521027731558" expanded="true" signature="310:347" ph="SELECT * FRO... category" />
+                <marker date="1521027731558" expanded="true" signature="838:1024" ph="SELECT * FRO... sub_category" />
+                <marker date="1521027731558" expanded="true" signature="1437:1496" ph="DELETE FROM `myhobby-test`.category... " />
+                <marker date="1521027731558" expanded="true" signature="1802:1868" ph="DELETE FROM `myhobby-test`.sub_category... " />
+                <marker date="1521027731558" expanded="true" signature="2238:2322" ph="UPDATE `myhobby-test`.category... " />
+                <marker date="1521027731558" expanded="true" signature="2742:2837" ph="UPDATE `myhobby-test`.sub_category... " />
+                <marker date="1521027731558" expanded="true" signature="3229:3300" ph="INSERT INTO `myhobby-test`.category... " />
+                <marker date="1521027731558" expanded="true" signature="3709:3815" ph="INSERT INTO `myhobby-test`.sub_category... " />
+                <marker date="1521027731558" expanded="true" signature="4137:4171" ph="SELECT * FRO... users" />
+                <marker date="1521027731558" expanded="true" signature="4595:4647" ph="DELETE FROM `myhobby-test`.users... " />
+                <marker date="1521027731558" expanded="true" signature="5035:5143" ph="UPDATE `myhobby-test`.users... " />
               </folding>
             </state>
           </provider>
@@ -66,7 +67,7 @@
     </option>
     <push-targets>
       <push-target-info target-remote="origin" target-branch="marko" repo="$PROJECT_DIR$" source="master" />
-      <push-target-info target-remote="origin" target-branch="master" repo="$PROJECT_DIR$" source="marko" />
+      <push-target-info target-remote="origin" target-branch="marko" repo="$PROJECT_DIR$" source="marko" />
     </push-targets>
     <favorite-branches>
       <branch-storage>
@@ -252,7 +253,7 @@
       <workItem from="1520866164375" duration="17500000" />
       <workItem from="1520955955240" duration="3529000" />
       <workItem from="1520972377659" duration="3789000" />
-      <workItem from="1521027484316" duration="213000" />
+      <workItem from="1521027484316" duration="248000" />
     </task>
     <task id="LOCAL-00001" summary="aaa">
       <created>1520507709699</created>
@@ -457,11 +458,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521027496828</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Admin">
+      <created>1521027705798</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1521027705798</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56057000" />
+    <option name="totallyTimeSpent" value="56092000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -726,19 +734,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="46" column="3" lean-forward="false" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
+        <state relative-caret-position="340">
+          <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
           <folding>
-            <marker date="1521027696535" expanded="true" signature="310:347" ph="SELECT * FRO... category" />
-            <marker date="1521027696535" expanded="true" signature="838:1024" ph="SELECT * FRO... sub_category" />
-            <marker date="1521027696535" expanded="true" signature="1437:1496" ph="DELETE FROM `myhobby-test`.category... " />
-            <marker date="1521027696535" expanded="true" signature="1871:1955" ph="UPDATE `myhobby-test`.category... " />
-            <marker date="1521027696535" expanded="true" signature="2375:2470" ph="UPDATE `myhobby-test`.sub_category... " />
-            <marker date="1521027696535" expanded="true" signature="2862:2933" ph="INSERT INTO `myhobby-test`.category... " />
-            <marker date="1521027696535" expanded="true" signature="3342:3448" ph="INSERT INTO `myhobby-test`.sub_category... " />
-            <marker date="1521027696535" expanded="true" signature="3770:3804" ph="SELECT * FRO... users" />
-            <marker date="1521027696535" expanded="true" signature="4228:4280" ph="DELETE FROM `myhobby-test`.users... " />
-            <marker date="1521027696535" expanded="true" signature="4668:4776" ph="UPDATE `myhobby-test`.users... " />
+            <marker date="1521027731558" expanded="true" signature="310:347" ph="SELECT * FRO... category" />
+            <marker date="1521027731558" expanded="true" signature="838:1024" ph="SELECT * FRO... sub_category" />
+            <marker date="1521027731558" expanded="true" signature="1437:1496" ph="DELETE FROM `myhobby-test`.category... " />
+            <marker date="1521027731558" expanded="true" signature="1802:1868" ph="DELETE FROM `myhobby-test`.sub_category... " />
+            <marker date="1521027731558" expanded="true" signature="2238:2322" ph="UPDATE `myhobby-test`.category... " />
+            <marker date="1521027731558" expanded="true" signature="2742:2837" ph="UPDATE `myhobby-test`.sub_category... " />
+            <marker date="1521027731558" expanded="true" signature="3229:3300" ph="INSERT INTO `myhobby-test`.category... " />
+            <marker date="1521027731558" expanded="true" signature="3709:3815" ph="INSERT INTO `myhobby-test`.sub_category... " />
+            <marker date="1521027731558" expanded="true" signature="4137:4171" ph="SELECT * FRO... users" />
+            <marker date="1521027731558" expanded="true" signature="4595:4647" ph="DELETE FROM `myhobby-test`.users... " />
+            <marker date="1521027731558" expanded="true" signature="5035:5143" ph="UPDATE `myhobby-test`.users... " />
           </folding>
         </state>
       </provider>
