@@ -1,6 +1,8 @@
 <?php
 include "../includes/db_config.php";
-
+include "header.php";
+include "footer.php";
+include "modal/category_modal.html";
 class Admin extends Database {
 
     public function __construct()
@@ -14,19 +16,19 @@ class Admin extends Database {
     {
         $list=$this->connection->query("SELECT * FROM `myhobby-test`.category");
 
-        echo "<a href='insert_category.php'>Add new category</a><br/>";
-        echo "<a href='insert_subcategory.php'>Add new subcategory</a><br/>";
-
+        echo "<h2 class='bg-dark manage'>Manage hobbies here:</h2>";
+        echo "<div id='hobbies'><table class='table table-dark table-hover'>";
+        echo "<tr><td></td><td class='align'><button type='button' class='btn btn-success btn-lg' data-toggle='modal' data-target='#category_modal'>Add new category</button></td></tr>";
         if($list->rowCount()>0) {
             while ($row1 = $list->fetch(PDO::FETCH_BOTH)) {
-                echo "<b>".$row1[0].". ".$row1["category_name"]."</b>"."<a href='delete_category.php?id=".$row1[0]."'>Delete</a><a href='update_category.php?id=".$row1[0]."'>Update</a><br/>";
-                $list1=$this->connection->query("SELECT * FROM `myhobby-test`.sub_category
-                                                  JOIN category sc ON sc.category_id = sub_category.id_category WHERE id_category='".$row1[0]."'");
+                echo "<tr class='bg-dark font-weight-bold'><td class='cell-hobby'>".$row1[1]."</td><td class='cell-hobby align'><a class='btn btn-success btn-spacing' href='insert_subcategory.php?id=".$row1[0]."'>New</a><a class='btn btn-primary btn-spacing' href='update_category.php?id=".$row1[0]."'>Update</a><a class='btn btn-danger' href='delete_category.php?id=".$row1[0]."'>Delete</a></td></tr>";
+                $list1=$this->connection->query("SELECT * FROM `myhobby-test`.sub_category JOIN category sc ON sc.category_id = sub_category.id_category WHERE id_category='".$row1[0]."'");
                 while ($row2 = $list1->fetch(PDO::FETCH_BOTH)) {
-                    echo $row2["sub_category_name"]."<a href='delete_subcategory.php?id=".$row2[0]."'>Delete</a><a href='update_subcategory.php?id=".$row2[0]."'>Update</a>" . "<br/>";
+                    echo "<tr><td class='cell-hobby'>".$row2[2]."</td><td class='cell-hobby align'><a class='btn btn-primary btn-spacing' href='update_subcategory.php?id=".$row2[0]."'>Update</a><a class='btn btn-danger' href='delete_subcategory.php?id=".$row2[0]."'>Delete</a></td></tr>";
                 }
             }
         }
+        echo "</table></div>";
     }
 
     public function delete_category()
@@ -115,10 +117,11 @@ class Admin extends Database {
 
     }
 
-    public function insert_subcategory($new_name,$btn_insert,$category_id)
+    public function insert_subcategory($new_name,$btn_insert)
     {
         if(!empty($btn_insert))
         {
+            $category_id=$_GET['id'];
             $insert=$this->connection->query("INSERT INTO `myhobby-test`.sub_category (id_category,sub_category_name) VALUE ('$category_id','$new_name')");
             if(!$insert)
             {
@@ -135,15 +138,19 @@ class Admin extends Database {
 
     public function select_users()
     {
+        echo "<h2 class='bg-dark manage'>Manage users here:</h2>";
+
         $list1=$this->connection->query("SELECT * FROM `myhobby-test`.users");
+        echo "<div id='users'><table class='table table-dark' ";
+        echo "<th><td>First name</td><td>Last name</td><td>E-mail</td><td class='align'>Manage</td></th>";
         if($list1->rowCount()>0)
         {
             while($row=$list1->fetch(PDO::FETCH_BOTH))
             {
-                echo $row[1]." ".$row[2]." "."<a href='delete_users.php?id=".$row[0]."'>Delete</a>"." "."<a href='update_users.php?id=".$row[0]."'>Update</a>"."<br/>";
+                echo "<tr><td class='cell-user'>".$row[1]."</td><td class='cell-user'>".$row[2]."</td>"."<td class='cell-user'>".$row[3]."</td><td class='cell-user align'><a class='btn btn-primary btn-spacing' href='update_users.php?id=".$row[0]."'>Update</a><a class='btn btn-danger' href='delete_users.php?id=".$row[0]."'>Delete</a></td>";
             }
         }
-
+        echo "</table></div>";
     }
 
     public function delete_users()

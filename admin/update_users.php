@@ -5,17 +5,22 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
     <title>Update</title>
 </head>
-<body>
-<form action="" method="post">
-    <label>New first name: </label>
-    <input type="text" name="new_first_name"><br/><br/>
-    <label>New last name: </label>
-    <input type="text" name="new_last_name"><br/><br/>
-    <input type="submit" name="btn_update">
-    <input type="reset">
-</form>
+<body id="center" class="center">
+<div>
+    <form class="form_center" action="" method="post">
+        <div class="form-group">
+            <label>New first name: </label>
+            <input class="form-control" type="text" name="new_first_name">
+        </div>
+        <label>New last name: </label>
+        <input class="form-control" type="text" name="new_last_name"><br/>
+        <input class="btn btn-primary" type="submit" name="btn_update" value="Update">
+        <input class="btn btn-secondary" type="reset" value="Cancel">
+    </form>
+</div>
 </body>
 </html>
 <?php

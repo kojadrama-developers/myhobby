@@ -8,12 +8,14 @@
     <title>Update</title>
 </head>
 <body>
-<form action="" method="post">
-    <label>New category name: </label>
-    <input type="text" name="new_name"><br/><br/>
-    <input type="submit" name="btn_update">
-    <input type="reset">
-</form>
+<div>
+    <form class="form_center" action="" method="post">
+        <label>New category name: </label>
+        <input class="form-control" type="text" name="new_name"><br/>
+        <input class="btn btn-primary" type="submit" name="btn_update" value="Update">
+        <input class="btn btn-secondary" type="reset" value="Cancel">
+    </form>
+</div>
 </body>
 </html>
 <?php
