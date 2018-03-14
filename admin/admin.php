@@ -140,9 +140,9 @@ class Admin extends Database {
     {
         $list1=$this->connection->query("SELECT * FROM `myhobby-test`.users");
 
-        echo "<table class='table table-dark'>";
+        echo "<table class='table table-dark table-hover'>";
         echo "<tr><td colspan='4'><h2>Manage users here:</h2></td></tr>";
-        echo "<tr><td>First name</td><td>Last name</td><td>E-mail</td><td class='align'>Manage</td></tr>";
+        echo "<tr class='bg-dark'><td>First name</td><td>Last name</td><td>E-mail</td><td class='align'>Manage</td></tr>";
         if($list1->rowCount()>0)
         {
             while($row=$list1->fetch(PDO::FETCH_BOTH))

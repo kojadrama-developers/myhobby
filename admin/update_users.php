@@ -9,7 +9,7 @@
     <title>Update</title>
 </head>
 <body id="center" class="center">
-<div>
+<div class="div_des">
     <form class="form_center" action="" method="post">
         <div class="form-group">
             <label>New first name: </label>
@@ -19,7 +19,9 @@
         <input class="form-control" type="text" name="new_last_name"><br/>
         <input class="btn btn-primary" type="submit" name="btn_update" value="Update">
         <input class="btn btn-secondary" type="reset" value="Cancel">
+        <a class="btn btn-warning" href="index.php">Admin page</a>
     </form>
+
 </div>
 </body>
 </html>

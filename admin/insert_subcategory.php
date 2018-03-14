@@ -8,12 +8,13 @@
     <title>Update</title>
 </head>
 <body>
-<div>
+<div class="div_des">
     <form class="form_center" action="" method="post">
         <label>New subcategory name: </label>
         <input class="form-control" type="text" name="new_name"><br/><br/>
         <input class="btn btn-primary" type="submit" name="btn_insert" value="Insert">
         <input class="btn btn-secondary" type="reset" value="Cancel">
+        <a class="btn btn-warning" href="index.php">Admin page</a>
     </form>
 </div>
 </body>
