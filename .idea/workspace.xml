@@ -4,11 +4,7 @@
     <list default="true" id="15df1c99-602c-4375-a7b8-d297cf4ee21f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/admin/admin.php" afterPath="$PROJECT_DIR$/admin/admin.php" />
-      <change beforePath="$PROJECT_DIR$/admin/insert_subcategory.php" afterPath="$PROJECT_DIR$/admin/insert_subcategory.php" />
-      <change beforePath="$PROJECT_DIR$/admin/main.css" afterPath="$PROJECT_DIR$/admin/main.css" />
-      <change beforePath="$PROJECT_DIR$/admin/update_category.php" afterPath="$PROJECT_DIR$/admin/update_category.php" />
-      <change beforePath="$PROJECT_DIR$/admin/update_subcategory.php" afterPath="$PROJECT_DIR$/admin/update_subcategory.php" />
-      <change beforePath="$PROJECT_DIR$/admin/update_users.php" afterPath="$PROJECT_DIR$/admin/update_users.php" />
+      <change beforePath="$PROJECT_DIR$/admin/modal/category_modal.html" afterPath="$PROJECT_DIR$/admin/modal/category_modal.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,20 +30,20 @@
       <file leaf-file-name="admin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="144" column="32" lean-forward="false" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
+            <state relative-caret-position="3043">
+              <caret line="179" column="13" lean-forward="true" selection-start-line="179" selection-start-column="13" selection-end-line="179" selection-end-column="13" />
               <folding>
-                <marker date="1521053271282" expanded="true" signature="390:427" ph="SELECT * FRO... category" />
-                <marker date="1521053271282" expanded="true" signature="1321:1457" ph="SELECT * FRO... sub_category" />
-                <marker date="1521053271282" expanded="true" signature="2024:2083" ph="DELETE FROM `myhobby-test`.category... " />
-                <marker date="1521053271282" expanded="true" signature="2389:2455" ph="DELETE FROM `myhobby-test`.sub_category... " />
-                <marker date="1521053271282" expanded="true" signature="2825:2909" ph="UPDATE `myhobby-test`.category... " />
-                <marker date="1521053271282" expanded="true" signature="3329:3424" ph="UPDATE `myhobby-test`.sub_category... " />
-                <marker date="1521053271282" expanded="true" signature="3816:3887" ph="INSERT INTO `myhobby-test`.category... " />
-                <marker date="1521053271282" expanded="true" signature="4321:4427" ph="INSERT INTO `myhobby-test`.sub_category... " />
-                <marker date="1521053271282" expanded="true" signature="4749:4783" ph="SELECT * FRO... users" />
-                <marker date="1521053271282" expanded="true" signature="5664:5716" ph="DELETE FROM `myhobby-test`.users... " />
-                <marker date="1521053271282" expanded="true" signature="6104:6212" ph="UPDATE `myhobby-test`.users... " />
+                <marker date="1521053764569" expanded="true" signature="390:427" ph="SELECT * FRO... category" />
+                <marker date="1521053764569" expanded="true" signature="1321:1457" ph="SELECT * FRO... sub_category" />
+                <marker date="1521053764569" expanded="true" signature="2024:2083" ph="DELETE FROM `myhobby-test`.category... " />
+                <marker date="1521053764569" expanded="true" signature="2389:2455" ph="DELETE FROM `myhobby-test`.sub_category... " />
+                <marker date="1521053764569" expanded="true" signature="2825:2909" ph="UPDATE `myhobby-test`.category... " />
+                <marker date="1521053764569" expanded="true" signature="3329:3424" ph="UPDATE `myhobby-test`.sub_category... " />
+                <marker date="1521053764569" expanded="true" signature="3816:3887" ph="INSERT INTO `myhobby-test`.category... " />
+                <marker date="1521053764569" expanded="true" signature="4321:4427" ph="INSERT INTO `myhobby-test`.sub_category... " />
+                <marker date="1521053764569" expanded="true" signature="4749:4783" ph="SELECT * FRO... users" />
+                <marker date="1521053764569" expanded="true" signature="5664:5716" ph="DELETE FROM `myhobby-test`.users... " />
+                <marker date="1521053764569" expanded="true" signature="6104:6212" ph="UPDATE `myhobby-test`.users... " />
               </folding>
             </state>
           </provider>
@@ -116,8 +112,8 @@
       <file leaf-file-name="category_modal.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/modal/category_modal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+            <state relative-caret-position="204">
+              <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -155,7 +151,7 @@
     </option>
     <push-targets>
       <push-target-info target-remote="origin" target-branch="marko" repo="$PROJECT_DIR$" source="master" />
-      <push-target-info target-remote="origin" target-branch="master" repo="$PROJECT_DIR$" source="marko" />
+      <push-target-info target-remote="origin" target-branch="marko" repo="$PROJECT_DIR$" source="marko" />
     </push-targets>
     <favorite-branches>
       <branch-storage>
@@ -214,11 +210,11 @@
         <option value="$PROJECT_DIR$/admin/index.php" />
         <option value="$PROJECT_DIR$/admin/navigation.php" />
         <option value="$PROJECT_DIR$/admin/update_subcategory.php" />
-        <option value="$PROJECT_DIR$/admin/admin.php" />
         <option value="$PROJECT_DIR$/admin/main.css" />
         <option value="$PROJECT_DIR$/admin/update_category.php" />
         <option value="$PROJECT_DIR$/admin/insert_subcategory.php" />
         <option value="$PROJECT_DIR$/admin/update_users.php" />
+        <option value="$PROJECT_DIR$/admin/admin.php" />
         <option value="$PROJECT_DIR$/admin/modal/category_modal.html" />
       </list>
     </option>
@@ -357,7 +353,7 @@
       <workItem from="1520955955240" duration="3529000" />
       <workItem from="1520972377659" duration="3789000" />
       <workItem from="1521027484316" duration="482000" />
-      <workItem from="1521030983036" duration="20861000" />
+      <workItem from="1521030983036" duration="21389000" />
     </task>
     <task id="LOCAL-00001" summary="aaa">
       <created>1520507709699</created>
@@ -611,11 +607,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521049667655</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Admin">
+      <created>1521053646739</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1521053646739</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77187000" />
+    <option name="totallyTimeSpent" value="77715000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -930,26 +933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="144" column="32" lean-forward="false" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
-          <folding>
-            <marker date="1521053271282" expanded="true" signature="390:427" ph="SELECT * FRO... category" />
-            <marker date="1521053271282" expanded="true" signature="1321:1457" ph="SELECT * FRO... sub_category" />
-            <marker date="1521053271282" expanded="true" signature="2024:2083" ph="DELETE FROM `myhobby-test`.category... " />
-            <marker date="1521053271282" expanded="true" signature="2389:2455" ph="DELETE FROM `myhobby-test`.sub_category... " />
-            <marker date="1521053271282" expanded="true" signature="2825:2909" ph="UPDATE `myhobby-test`.category... " />
-            <marker date="1521053271282" expanded="true" signature="3329:3424" ph="UPDATE `myhobby-test`.sub_category... " />
-            <marker date="1521053271282" expanded="true" signature="3816:3887" ph="INSERT INTO `myhobby-test`.category... " />
-            <marker date="1521053271282" expanded="true" signature="4321:4427" ph="INSERT INTO `myhobby-test`.sub_category... " />
-            <marker date="1521053271282" expanded="true" signature="4749:4783" ph="SELECT * FRO... users" />
-            <marker date="1521053271282" expanded="true" signature="5664:5716" ph="DELETE FROM `myhobby-test`.users... " />
-            <marker date="1521053271282" expanded="true" signature="6104:6212" ph="UPDATE `myhobby-test`.users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
@@ -982,14 +965,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/insert_category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/update_users.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -998,10 +973,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3043">
+          <caret line="179" column="13" lean-forward="true" selection-start-line="179" selection-start-column="13" selection-end-line="179" selection-end-column="13" />
+          <folding>
+            <marker date="1521053764569" expanded="true" signature="390:427" ph="SELECT * FRO... category" />
+            <marker date="1521053764569" expanded="true" signature="1321:1457" ph="SELECT * FRO... sub_category" />
+            <marker date="1521053764569" expanded="true" signature="2024:2083" ph="DELETE FROM `myhobby-test`.category... " />
+            <marker date="1521053764569" expanded="true" signature="2389:2455" ph="DELETE FROM `myhobby-test`.sub_category... " />
+            <marker date="1521053764569" expanded="true" signature="2825:2909" ph="UPDATE `myhobby-test`.category... " />
+            <marker date="1521053764569" expanded="true" signature="3329:3424" ph="UPDATE `myhobby-test`.sub_category... " />
+            <marker date="1521053764569" expanded="true" signature="3816:3887" ph="INSERT INTO `myhobby-test`.category... " />
+            <marker date="1521053764569" expanded="true" signature="4321:4427" ph="INSERT INTO `myhobby-test`.sub_category... " />
+            <marker date="1521053764569" expanded="true" signature="4749:4783" ph="SELECT * FRO... users" />
+            <marker date="1521053764569" expanded="true" signature="5664:5716" ph="DELETE FROM `myhobby-test`.users... " />
+            <marker date="1521053764569" expanded="true" signature="6104:6212" ph="UPDATE `myhobby-test`.users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/insert_category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/modal/category_modal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        <state relative-caret-position="204">
+          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
           <folding />
         </state>
       </provider>
