@@ -17,7 +17,7 @@ class Admin extends Database {
         $list=$this->connection->query("SELECT * FROM `myhobby-test`.category");
 
         echo "";
-        echo "<table class='table table-dark table-hover'>";
+        echo "<table id='hobbies' class='table table-dark table-hover'>";
         echo "<tr><td><h2 class='manage'>Manage hobbies here:</h2></td><td class='align'><button type='button' class='btn btn-success btn-lg' data-toggle='modal' data-target='#category_modal'>Add new category</button></td></tr>";
         if($list->rowCount()>0) {
             while ($row1 = $list->fetch(PDO::FETCH_BOTH)) {
