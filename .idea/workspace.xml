@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="15df1c99-602c-4375-a7b8-d297cf4ee21f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/admin.php" afterPath="$PROJECT_DIR$/admin/admin.php" />
+      <change beforePath="$PROJECT_DIR$/admin/delete_category.php" afterPath="$PROJECT_DIR$/admin/delete_category.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,24 +26,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="admin.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/admin.php">
+      <file leaf-file-name="delete_category.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/delete_category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
-              <folding>
-                <marker date="1521027731558" expanded="true" signature="310:347" ph="SELECT * FRO... category" />
-                <marker date="1521027731558" expanded="true" signature="838:1024" ph="SELECT * FRO... sub_category" />
-                <marker date="1521027731558" expanded="true" signature="1437:1496" ph="DELETE FROM `myhobby-test`.category... " />
-                <marker date="1521027731558" expanded="true" signature="1802:1868" ph="DELETE FROM `myhobby-test`.sub_category... " />
-                <marker date="1521027731558" expanded="true" signature="2238:2322" ph="UPDATE `myhobby-test`.category... " />
-                <marker date="1521027731558" expanded="true" signature="2742:2837" ph="UPDATE `myhobby-test`.sub_category... " />
-                <marker date="1521027731558" expanded="true" signature="3229:3300" ph="INSERT INTO `myhobby-test`.category... " />
-                <marker date="1521027731558" expanded="true" signature="3709:3815" ph="INSERT INTO `myhobby-test`.sub_category... " />
-                <marker date="1521027731558" expanded="true" signature="4137:4171" ph="SELECT * FRO... users" />
-                <marker date="1521027731558" expanded="true" signature="4595:4647" ph="DELETE FROM `myhobby-test`.users... " />
-                <marker date="1521027731558" expanded="true" signature="5035:5143" ph="UPDATE `myhobby-test`.users... " />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="3" column="34" lean-forward="false" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,7 +103,6 @@
         <option value="$PROJECT_DIR$/admin/insert.php" />
         <option value="$PROJECT_DIR$/admin/delete.php" />
         <option value="$PROJECT_DIR$/admin/delete_subcategory.php" />
-        <option value="$PROJECT_DIR$/admin/delete_category.php" />
         <option value="$PROJECT_DIR$/admin/list_hobby.php" />
         <option value="$PROJECT_DIR$/admin/list_users.php" />
         <option value="$PROJECT_DIR$/admin/index.php" />
@@ -126,6 +113,7 @@
         <option value="$PROJECT_DIR$/admin/update_subcategory.php" />
         <option value="$PROJECT_DIR$/admin/update_users.php" />
         <option value="$PROJECT_DIR$/admin/admin.php" />
+        <option value="$PROJECT_DIR$/admin/delete_category.php" />
       </list>
     </option>
   </component>
@@ -253,7 +241,7 @@
       <workItem from="1520866164375" duration="17500000" />
       <workItem from="1520955955240" duration="3529000" />
       <workItem from="1520972377659" duration="3789000" />
-      <workItem from="1521027484316" duration="248000" />
+      <workItem from="1521027484316" duration="331000" />
     </task>
     <task id="LOCAL-00001" summary="aaa">
       <created>1520507709699</created>
@@ -465,11 +453,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521027705798</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Admin">
+      <created>1521027736775</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1521027736775</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56092000" />
+    <option name="totallyTimeSpent" value="56175000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -703,7 +698,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/list_hobby.php" />
     <entry file="file://$PROJECT_DIR$/admin/list_users.php" />
-    <entry file="file://$PROJECT_DIR$/admin/delete_category.php" />
     <entry file="file://$PROJECT_DIR$/admin/delete_users.php" />
     <entry file="file://$PROJECT_DIR$/../story/admin/update.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -749,6 +743,14 @@
             <marker date="1521027731558" expanded="true" signature="4595:4647" ph="DELETE FROM `myhobby-test`.users... " />
             <marker date="1521027731558" expanded="true" signature="5035:5143" ph="UPDATE `myhobby-test`.users... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/delete_category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="34" lean-forward="false" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
