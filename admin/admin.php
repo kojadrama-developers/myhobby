@@ -44,20 +44,7 @@ class Admin extends Database {
         }
     }
 
-    public function delete_subcategory()
-    {
-        $id=$_GET['id'];
-        $delete=$this->connection->query("DELETE FROM `myhobby-test`.sub_category WHERE subcategory_id='$id'");
-        if(!$delete)
-        {
-            echo "Not deleted";
-        }
-        else
-        {
-            header("Refresh:0;url=index.php");
-            return $delete;
-        }
-    }
+
 
     public function update_category($new_name,$btn_update)
     {
