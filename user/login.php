@@ -15,11 +15,11 @@ if(isset($_POST['login_btn']))
 
     if($login->doLogin($email,$password))
     {
-        $login->redirect('../index.php?logged');
+        $login->redirect('../index.php');
     }
     else
     {
-        $error="Wrong details!";
+        $login->redirect('../index.php');
     }
 }
 ?>

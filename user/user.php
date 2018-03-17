@@ -53,7 +53,7 @@ class USER
            {
                if(password_verify($password,$userRow['password']))
                {
-                   $_SESSION['user_session']=$userRow['user_id'];
+                   $_SESSION['user_session']=$userRow['first_name'];
                    return true;
                }
                else
@@ -74,6 +74,7 @@ class USER
         {
             return true;
         }
+
     }
 
     public function redirect($url)
@@ -83,9 +84,9 @@ class USER
 
     public function doLogout()
     {
+        $_SESSION=array();
         session_destroy();
-        unset($_SESSION['user_session']);
-        return true;
     }
+
 
 }

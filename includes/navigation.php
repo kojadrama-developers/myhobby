@@ -15,25 +15,21 @@
             <li class="nav-item">
                 <a class="nav-link" href="contact.php">Contact</a>
             </li>
-            <!--<li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>-->
-
-            <li class="nav-item">
-                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#SignInModal">Sign in</button>
-            </li>
-            <!-- <li class="nav-item">
-                 <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#RegModal">Registration</button>
-             </li>-->
-
+            <?php
+            session_start();
+            if(isset($_SESSION['user_session']))
+            {
+                echo "<a class='btn btn-danger' href='user/logout.php'>Logout</a>";
+                echo "<p class=''> Hello: {$_SESSION['user_session']} </p>";
+            }
+            else {
+                ?>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#SignInModal">Sign in</button>
+                </li>
+                <?php
+            }
+            ?>
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
