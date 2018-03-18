@@ -60,7 +60,6 @@ class USER
                        $stmt=$this->connection->prepare("UPDATE `myhobby-test`.users SET first_log=1 WHERE email=:email");
                        $stmt->execute(array(':email'=>$email));
                        $_SESSION['user_session'] = $userRow['first_name'];
-                       return true;
                    }
                }
                else

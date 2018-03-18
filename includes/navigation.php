@@ -19,7 +19,7 @@
                 <?php
                 include "class.functions.php";
                 $user=new Functions();
-                $user->if_logged_in();
+                $user->login_btn();
                 ?>
             </li>
             <li>

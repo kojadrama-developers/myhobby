@@ -22,8 +22,9 @@
         <div class="carousel-item">
             <img class="d-block w-100" src="img/mapa.jpg" alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
-                <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#RegModal">Registration</button>
-                <p id="aboutReg">Registration and  </p>
+                <?php
+                $user->register_btn();
+                ?>
             </div>
         </div>
     </div>

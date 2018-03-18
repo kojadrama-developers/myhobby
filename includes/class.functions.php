@@ -2,7 +2,7 @@
 
 class Functions
 {
-    public function if_logged_in()
+    public function login_btn()
     {
         session_start();
         if(isset($_SESSION['user_session']))
@@ -24,5 +24,13 @@ class Functions
         {
             echo "<h4 style='margin-left: 10px'><span class='badge badge-dark'> Hello {$_SESSION['user_session']} </span></h4>";
         }
+    }
+
+    public function register_btn()
+    {
+        if(!isset($_SESSION['user_session']))
+        { ?>
+            <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#RegModal">Registration</button>
+        <?php }
     }
 }
