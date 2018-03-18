@@ -22,6 +22,11 @@
                 $user->if_logged_in();
                 ?>
             </li>
+            <li>
+                <?php
+                $user->hello_message();
+                ?>
+            </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
