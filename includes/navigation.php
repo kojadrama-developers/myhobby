@@ -15,21 +15,13 @@
             <li class="nav-item">
                 <a class="nav-link" href="contact.php">Contact</a>
             </li>
-            <?php
-            session_start();
-            if(isset($_SESSION['user_session']))
-            {
-                echo "<a class='btn btn-danger' href='user/logout.php'>Logout</a>";
-                echo "<p class=''> Hello: {$_SESSION['user_session']} </p>";
-            }
-            else {
-                ?>
-                <li class="nav-item">
-                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#SignInModal">Sign in</button>
-                </li>
+            <li>
                 <?php
-            }
-            ?>
+                include "class.functions.php";
+                $user=new Functions();
+                $user->if_logged_in();
+                ?>
+            </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
