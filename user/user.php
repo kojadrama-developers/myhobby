@@ -51,8 +51,17 @@ class USER
            $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
            if($stmt->rowCount()==1)
            {
-               if(password_verify($password,$userRow['password']))
+               if($userRow['first_log']==1 and password_verify($password,$userRow['password']))
                {
+                   $this->redirect("../index.php");
+                   $stmt=$this->connection->prepare("UPDATE `myhobby-test`.users SET first_log=0 WHERE email=:email");
+                   $stmt->execute(array(':email'=>$email));
+                   $_SESSION['user_session'] = $userRow['first_name'];
+                   return true;
+               }
+               elseif($userRow['first_log']==0 and password_verify($password,$userRow['password']))
+               {
+                   $this->redirect("../index.php");
                    $_SESSION['user_session'] = $userRow['first_name'];
                    return true;
                }
@@ -87,5 +96,4 @@ class USER
         $_SESSION=array();
         session_destroy();
     }
-
 }
