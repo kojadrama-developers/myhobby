@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15df1c99-602c-4375-a7b8-d297cf4ee21f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/user/hobby.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/user/user.php" afterPath="$PROJECT_DIR$/user/user.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,8 +30,8 @@
       <file leaf-file-name="user.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/user/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="408">
+              <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
               <folding>
                 <marker date="1521656493690" expanded="true" signature="604:755" ph="INSERT INTO `myhobby-test`.users... " />
                 <marker date="1521656493690" expanded="true" signature="1326:1379" ph="SELECT * FRO... users" />
@@ -218,11 +216,6 @@
               <item name="myhobby" type="b2602c69:ProjectViewProjectNode" />
               <item name="myhobby" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="myhobby" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myhobby" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="user" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -295,7 +288,7 @@
       <workItem from="1521389412944" duration="3241000" />
       <workItem from="1521477023880" duration="6736000" />
       <workItem from="1521641697177" duration="8239000" />
-      <workItem from="1521656417444" duration="77000" />
+      <workItem from="1521656417444" duration="236000" />
     </task>
     <task id="LOCAL-00001" summary="aaa">
       <created>1520507709699</created>
@@ -612,11 +605,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521482993088</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Login">
+      <created>1521656500244</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1521656500244</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124898000" />
+    <option name="totallyTimeSpent" value="125057000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -983,8 +983,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        <state relative-caret-position="408">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
           <folding>
             <marker date="1521656493690" expanded="true" signature="604:755" ph="INSERT INTO `myhobby-test`.users... " />
             <marker date="1521656493690" expanded="true" signature="1326:1379" ph="SELECT * FRO... users" />
