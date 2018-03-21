@@ -95,5 +95,6 @@ class USER
     {
         $_SESSION=array();
         session_destroy();
+        echo "";
     }
 }
