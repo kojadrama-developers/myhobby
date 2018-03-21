@@ -30,8 +30,8 @@
       <file leaf-file-name="user.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/user/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="83" column="24" lean-forward="false" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+            <state relative-caret-position="664">
+              <caret line="93" column="30" lean-forward="true" selection-start-line="93" selection-start-column="30" selection-end-line="93" selection-end-column="30" />
               <folding>
                 <marker date="1521658767767" expanded="true" signature="604:755" ph="INSERT INTO `myhobby-test`.users... " />
                 <marker date="1521658767767" expanded="true" signature="1326:1379" ph="SELECT * FRO... users" />
@@ -73,8 +73,8 @@
       </map>
     </option>
     <push-targets>
-      <push-target-info target-remote="origin" target-branch="marko" repo="$PROJECT_DIR$" source="master" />
       <push-target-info target-remote="origin" target-branch="marko" repo="$PROJECT_DIR$" source="marko" />
+      <push-target-info target-remote="origin" target-branch="master" repo="$PROJECT_DIR$" source="master" />
     </push-targets>
     <favorite-branches>
       <branch-storage>
@@ -291,7 +291,8 @@
       <workItem from="1521656417444" duration="108000" />
       <workItem from="1521657473432" duration="540000" />
       <workItem from="1521658734170" duration="1216000" />
-      <workItem from="1521659965394" duration="59000" />
+      <workItem from="1521659965394" duration="114000" />
+      <workItem from="1521660099183" duration="9000" />
     </task>
     <task id="LOCAL-00001" summary="aaa">
       <created>1520507709699</created>
@@ -622,11 +623,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521659976128</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Login">
+      <created>1521660029741</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1521660029741</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126844000" />
+    <option name="totallyTimeSpent" value="126908000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -639,8 +647,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23081024" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23347548" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.50208336" order="0" side_tool="true" content_ui="tabs" />
@@ -1012,8 +1021,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="83" column="24" lean-forward="false" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+        <state relative-caret-position="664">
+          <caret line="93" column="30" lean-forward="true" selection-start-line="93" selection-start-column="30" selection-end-line="93" selection-end-column="30" />
           <folding>
             <marker date="1521658767767" expanded="true" signature="604:755" ph="INSERT INTO `myhobby-test`.users... " />
             <marker date="1521658767767" expanded="true" signature="1326:1379" ph="SELECT * FRO... users" />
