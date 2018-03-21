@@ -30,8 +30,8 @@
       <file leaf-file-name="user.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/user/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="664">
-              <caret line="93" column="30" lean-forward="true" selection-start-line="93" selection-start-column="30" selection-end-line="93" selection-end-column="30" />
+            <state relative-caret-position="307">
+              <caret line="72" column="9" lean-forward="true" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
               <folding>
                 <marker date="1521658767767" expanded="true" signature="604:755" ph="INSERT INTO `myhobby-test`.users... " />
                 <marker date="1521658767767" expanded="true" signature="1326:1379" ph="SELECT * FRO... users" />
@@ -292,7 +292,7 @@
       <workItem from="1521657473432" duration="540000" />
       <workItem from="1521658734170" duration="1216000" />
       <workItem from="1521659965394" duration="114000" />
-      <workItem from="1521660099183" duration="9000" />
+      <workItem from="1521660099183" duration="185000" />
     </task>
     <task id="LOCAL-00001" summary="aaa">
       <created>1520507709699</created>
@@ -630,11 +630,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521660029741</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Login">
+      <created>1521660114857</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1521660114857</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126908000" />
+    <option name="totallyTimeSpent" value="127084000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1021,8 +1028,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="93" column="30" lean-forward="true" selection-start-line="93" selection-start-column="30" selection-end-line="93" selection-end-column="30" />
+        <state relative-caret-position="307">
+          <caret line="72" column="9" lean-forward="true" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
           <folding>
             <marker date="1521658767767" expanded="true" signature="604:755" ph="INSERT INTO `myhobby-test`.users... " />
             <marker date="1521658767767" expanded="true" signature="1326:1379" ph="SELECT * FRO... users" />
