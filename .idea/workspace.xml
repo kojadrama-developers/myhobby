@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15df1c99-602c-4375-a7b8-d297cf4ee21f" name="Default" comment="Reg form validation">
-      <change beforePath="" afterPath="$PROJECT_DIR$/user/aaa.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/user/aaa.php" afterPath="$PROJECT_DIR$/user/aaa.php" />
       <change beforePath="$PROJECT_DIR$/user/user.php" afterPath="$PROJECT_DIR$/user/user.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/user/aaa.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -125,7 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/functions.php" />
         <option value="$PROJECT_DIR$/user/session.php" />
         <option value="$PROJECT_DIR$/includes/function.php" />
         <option value="$PROJECT_DIR$/user/function.php" />
@@ -176,6 +175,7 @@
         <option value="$PROJECT_DIR$/includes/db_config.php" />
         <option value="$PROJECT_DIR$/includes/registrationmodal.php" />
         <option value="$PROJECT_DIR$/user/user.php" />
+        <option value="$PROJECT_DIR$/user/aaa.php" />
       </list>
     </option>
   </component>
@@ -766,11 +766,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521660627017</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Proba">
+      <created>1521661422866</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1521661422866</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127281000" />
+    <option name="totallyTimeSpent" value="127363000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -859,7 +866,8 @@
     <MESSAGE value="Admin" />
     <MESSAGE value="Login" />
     <MESSAGE value="Reg form validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reg form validation" />
+    <MESSAGE value="Proba" />
+    <option name="LAST_COMMIT_MESSAGE" value="Proba" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1073,7 +1081,7 @@
     <entry file="file://$PROJECT_DIR$/user/aaa.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
           <folding />
         </state>
       </provider>
