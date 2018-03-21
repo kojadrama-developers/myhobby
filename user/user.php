@@ -53,7 +53,7 @@ class USER
            {
                if($userRow['first_log']==1 and password_verify($password,$userRow['password']))
                {
-                   $this->redirect("../index.php");
+                   $this->redirect("hobby.php");
                    $stmt=$this->connection->prepare("UPDATE `myhobby-test`.users SET first_log=0 WHERE email=:email");
                    $stmt->execute(array(':email'=>$email));
                    $_SESSION['user_session'] = $userRow['first_name'];
