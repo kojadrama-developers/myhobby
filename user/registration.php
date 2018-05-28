@@ -17,6 +17,7 @@ if(isset($_POST['register_btn']))
     $password=strip_tags($_POST['password']);
     $date=strip_tags($_POST['date_of_birth']);
     $sex=strip_tags($_POST['sex']);
+    $state=strip_tags($_POST['state']);
 
     if($firstName==""){
         $error[]="Please provide your first name!";
@@ -43,7 +44,7 @@ if(isset($_POST['register_btn']))
     {
         try
         {
-            $stmt=$user->runQuery("SELECT email FROM `myhobby-test`.users");
+            $stmt=$user->runQuery("SELECT email FROM `myhobby`.users");
             $stmt->execute(array(':email'=>$email));
             $row=$stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -53,7 +54,7 @@ if(isset($_POST['register_btn']))
             }
             else
             {
-                if($user->register($firstName,$lastName,$email,$password,$date,$sex))
+                if($user->register($email,$password,$firstName,$lastName,$date,$sex,$state))
                 {
                     $user->redirect('../index.php');
                 }

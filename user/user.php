@@ -19,11 +19,11 @@ class USER
         return $stmt;
     }
 
-    public function register($firstName,$lastName,$email,$password,$date,$sex,$state)
+    public function register($email,$password,$firstName,$lastName,$date,$sex,$state)
     {
         try
         {
-            $new_password=hash("md5",$password);
+            $new_password=password_hash($password,PASSWORD_DEFAULT);
             $stmt=$this->connection->prepare("call register_user($email,$new_password,$firstName,$lastName,$date,$sex,$state)");
 
             $stmt->bindparam("firstName",$firstName);
