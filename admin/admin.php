@@ -156,13 +156,14 @@ class Admin extends Database {
     public function delete_users()
     {
         $id=$_GET['id'];
-        $delete=$this->connection->query("DELETE FROM `myhobby`.users_info WHERE user_id='$id'");
+        $delete=$this->connection->query("DELETE FROM `myhobby`.users WHERE user_id='$id'");
         if(!$delete)
         {
             echo "Not deleted";
         }
         else
         {
+            var_dump($id);
             header("Refresh:0;url=index.php");
             return $delete;
         }
