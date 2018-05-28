@@ -51,15 +51,23 @@ class USER
            $stmt=$this->connection->prepare("SELECT * FROM `myhobby`.users WHERE email=:email");
            $stmt->execute(array(':email'=>$email));
            $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
-           $stmt1=$this->$connection->prepare("SELECT * FROM `myhobby`.users_info WHERE user_id IN (SELECT user_id FROM `myhobby`.users WHERE email=:email)");
+           $stmt1=$this->connection->prepare("SELECT * FROM `myhobby`.users_info WHERE user_id IN (SELECT user_id FROM `myhobby`.users WHERE email=:email)");
            $stmt1->execute(array(':email'=>$email));
            $userRow1=$stmt1->fetch(PDO::FETCH_ASSOC);
            if($stmt->rowCount()==1)
            {
-               if(password_verify($password,$userRow['password']))
+               if($userRow1['first_log']==1 and password_verify($password,$userRow['password']))
+               {
+                   $this->redirect("hobby.php");
+                   $stmt1=$this->connection->prepare("UPDATE `myhobby`.users_info SET first_log=0 WHERE user_id IN (SELECT user_id FROM `myhobby`.users WHERE email=:email)");
+                   $stmt1->execute(array(':email'=>$email));
+                   $_SESSION['user_session'] = $userRow1['first_name'];
+                   return true;
+               }
+               else if($userRow1['first_log']==0 and password_verify($password,$userRow['password']))
                {
                    $this->redirect("../index.php");
-                   $_SESSION['user_session'] = $userRow['email'];
+                   $_SESSION['user_session']=$userRow1['first_name'];
                    return true;
                }
                else
