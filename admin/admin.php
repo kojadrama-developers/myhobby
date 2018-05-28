@@ -22,7 +22,7 @@ class Admin extends Database {
         if($list->rowCount()>0) {
             while ($row1 = $list->fetch(PDO::FETCH_BOTH)) {
                 echo "<tr class='bg-dark font-weight-bold'><td class='cell-hobby'><p id='category'>".$row1[1]."</p></td><td class='cell-hobby align'><a class='btn btn-success btn-spacing' href='insert_subcategory.php?id=".$row1[0]."'>New</a><a class='btn btn-primary btn-spacing' href='update_category.php?id=".$row1[0]."'>Update</a><a class='btn btn-danger' href='delete_category.php?id=".$row1[0]."'>Delete</a></td></tr>";
-                $list1=$this->connection->query("SELECT * FROM `myhobby`.sub_category JOIN category sc ON sc.category_id = sub_category.id_category WHERE id_category='".$row1[0]."'");
+                $list1=$this->connection->query("SELECT * FROM `myhobby`.sub_category JOIN category sc ON sc.category_id = sub_category.category_id WHERE sc.category_id='".$row1[0]."'");
                 while ($row2 = $list1->fetch(PDO::FETCH_BOTH)) {
                     echo "<tr><td class='cell-hobby'><p id='subcategory'>".$row2[2]."</p></td><td class='cell-hobby align'><a class='btn btn-primary btn-spacing' href='update_subcategory.php?id=".$row2[0]."'>Update</a><a class='btn btn-danger' href='delete_subcategory.php?id=".$row2[0]."'>Delete</a></td></tr>";
                 }
@@ -122,7 +122,7 @@ class Admin extends Database {
         if(!empty($btn_insert))
         {
             $category_id=$_GET['id'];
-            $insert=$this->connection->query("INSERT INTO `myhobby`.sub_category (id_category,sub_category_name) VALUE ('$category_id','$new_name')");
+            $insert=$this->connection->query("INSERT INTO `myhobby`.sub_category (category_id,sub_category_name) VALUE ('$category_id','$new_name')");
             if(!$insert)
             {
                 echo "Not inserted";
@@ -138,16 +138,16 @@ class Admin extends Database {
 
     public function select_users()
     {
-        $list1=$this->connection->query("SELECT * FROM `myhobby`.users");
+        $list1=$this->connection->query("SELECT * FROM `myhobby`.users_info");
 
         echo "<table class='table table-dark table-hover'>";
         echo "<tr><td colspan='4'><h2>Manage users here:</h2></td></tr>";
-        echo "<tr class='bg-dark'><td>First name</td><td>Last name</td><td>E-mail</td><td class='align'>Manage</td></tr>";
+        echo "<tr class='bg-dark'><td>First name</td><td>Last name</td><td>Date of birth</td><td class='align'>Manage</td></tr>";
         if($list1->rowCount()>0)
         {
             while($row=$list1->fetch(PDO::FETCH_BOTH))
             {
-                echo "<tr><td class='cell-user'>".$row[1]."</td><td class='cell-user'>".$row[2]."</td>"."<td class='cell-user'>".$row[3]."</td><td class='cell-user align'><a class='btn btn-primary btn-spacing' href='update_users.php?id=".$row[0]."'>Update</a><a class='btn btn-danger' href='delete_users.php?id=".$row[0]."'>Delete</a></td>";
+                echo "<tr><td class='cell-user'>".$row[2]."</td><td class='cell-user'>".$row[3]."</td>"."<td class='cell-user'>".$row[4]."</td><td class='cell-user align'><a class='btn btn-primary btn-spacing' href='update_users.php?id=".$row[0]."'>Update</a><a class='btn btn-danger' href='delete_users.php?id=".$row[0]."'>Delete</a></td>";
             }
         }
         echo "</table>";
@@ -156,7 +156,7 @@ class Admin extends Database {
     public function delete_users()
     {
         $id=$_GET['id'];
-        $delete=$this->connection->query("DELETE FROM `myhobby`.users WHERE user_id='$id'");
+        $delete=$this->connection->query("DELETE FROM `myhobby`.users_info WHERE user_id='$id'");
         if(!$delete)
         {
             echo "Not deleted";
@@ -173,7 +173,7 @@ class Admin extends Database {
         $id=$_GET['id'];
         if(!empty($btn_update))
         {
-            $update=$this->connection->query("UPDATE `myhobby`.users SET first_name='$new_first_name', last_name='$new_last_name' WHERE user_id='$id'");
+            $update=$this->connection->query("UPDATE `myhobby`.users_info SET first_name='$new_first_name', last_name='$new_last_name' WHERE user_id='$id'");
             if(!$update)
             {
                 echo "Not updated";

@@ -11,7 +11,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="user/registration" method="post" onsubmit="return Validate()" name="vForm">
+                <form action="user/registration.php" method="post" onsubmit="return Validate()" name="vForm">
 
 
                     <div class="form-group" id="first_div">
