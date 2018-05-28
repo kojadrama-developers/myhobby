@@ -54,7 +54,7 @@ if(isset($_POST['register_btn']))
             }
             else
             {
-                if($user->register($email,$password,$firstName,$lastName,$date,$sex,$state))
+                if($user->register($firstName,$lastName,$email,$password,$date,$sex,$state))
                 {
                     $user->redirect('../index.php');
                 }

@@ -19,17 +19,18 @@ class USER
         return $stmt;
     }
 
-    public function register($email,$password,$firstName,$lastName,$date,$sex,$state)
+    public function register($firstName,$lastName,$email,$password,$date,$sex,$state)
     {
         try
         {
             $new_password=password_hash($password,PASSWORD_DEFAULT);
-            $stmt=$this->connection->prepare("call register_user($email,$new_password,$firstName,$lastName,$date,$sex,$state)");
+            $stmt=$this->connection->prepare("INSERT INTO users (email,password) VALUES ('$email','$new_password');
+                                              INSERT INTO users_info (user_id,first_name,last_name,date_of_birth,sex,`state`) VALUES (LAST_INSERT_ID(),'$firstName','$lastName','$date','$sex','$state');");
 
-            $stmt->bindparam("firstName",$firstName);
-            $stmt->bindparam("lastName",$lastName);
             $stmt->bindparam("email",$email);
             $stmt->bindparam("password",$new_password);
+            $stmt->bindparam("firstName",$firstName);
+            $stmt->bindparam("lastName",$lastName);
             $stmt->bindparam("date",$date);
             $stmt->bindparam("sex",$sex);
             $stmt->bindparam("state",$state);

@@ -60,7 +60,7 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     //getting all input text object
     var first_name = document.forms["vForm"]["first_name"];
 
@@ -173,4 +173,4 @@
     }
 
 
-</script>
+</script> -->
