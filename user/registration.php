@@ -40,6 +40,9 @@ if(isset($_POST['register_btn']))
     else if($sex==""){
         $error[]="Please provide your sex!";
     }
+    else if($state==""){
+        $error[]="Please provide your state!";
+    }
     else
     {
         try

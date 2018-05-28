@@ -12,6 +12,5 @@ if(isset($_POST['login_btn']))
     $email=strip_tags($_POST['email']);
     $password=strip_tags($_POST['password']);
     $login->doLogin($email,$password);
-
 }
 ?>
