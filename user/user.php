@@ -51,6 +51,9 @@ class USER
            $stmt=$this->connection->prepare("SELECT * FROM `myhobby`.users WHERE email=:email");
            $stmt->execute(array(':email'=>$email));
            $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
+           $stmt1=$this->$connection->prepare("SELECT * FROM `myhobby`.users_info WHERE user_id IN (SELECT user_id FROM `myhobby`.users WHERE email=:email)");
+           $stmt1->execute(array(':email'=>$email));
+           $userRow1=$stmt1->fetch(PDO::FETCH_ASSOC);
            if($stmt->rowCount()==1)
            {
                if(password_verify($password,$userRow['password']))
