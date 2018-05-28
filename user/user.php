@@ -19,12 +19,12 @@ class USER
         return $stmt;
     }
 
-    public function register($firstName,$lastName,$email,$password,$date,$sex)
+    public function register($firstName,$lastName,$email,$password,$date,$sex,$state)
     {
         try
         {
-            $new_password=password_hash($password,PASSWORD_DEFAULT);
-            $stmt=$this->connection->prepare("INSERT INTO `myhobby-test`.users (first_name, last_name, email, password, date_of_birth, sex) VALUES (:firstName,:lastName,:email,:password,:date,:sex)");
+            $new_password=hash("md5",$password);
+            $stmt=$this->connection->prepare("call register_user($email,$new_password,$firstName,$lastName,$date,$sex,$state)");
 
             $stmt->bindparam("firstName",$firstName);
             $stmt->bindparam("lastName",$lastName);
@@ -32,6 +32,7 @@ class USER
             $stmt->bindparam("password",$new_password);
             $stmt->bindparam("date",$date);
             $stmt->bindparam("sex",$sex);
+            $stmt->bindparam("state",$state);
 
             $stmt->execute();
 
@@ -46,7 +47,7 @@ class USER
     {
         try
         {
-           $stmt=$this->connection->prepare("SELECT * FROM `myhobby-test`.users WHERE email=:email");
+           $stmt=$this->connection->prepare("SELECT * FROM `myhobby`.users WHERE email=:email");
            $stmt->execute(array(':email'=>$email));
            $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
            if($stmt->rowCount()==1)
@@ -54,7 +55,7 @@ class USER
                if($userRow['first_log']==1 and password_verify($password,$userRow['password']))
                {
                    $this->redirect("hobby.php");
-                   $stmt=$this->connection->prepare("UPDATE `myhobby-test`.users SET first_log=0 WHERE email=:email");
+                   $stmt=$this->connection->prepare("UPDATE `myhobby`.users SET first_log=0 WHERE email=:email");
                    $stmt->execute(array(':email'=>$email));
                    $_SESSION['user_session'] = $userRow['first_name'];
                    return true;
@@ -95,6 +96,5 @@ class USER
     {
         $_SESSION=array();
         session_destroy();
-        echo "";
     }
 }

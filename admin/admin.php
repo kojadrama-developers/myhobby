@@ -14,7 +14,7 @@ class Admin extends Database {
 
     public function select_hobbies()
     {
-        $list=$this->connection->query("SELECT * FROM `myhobby-test`.category");
+        $list=$this->connection->query("SELECT * FROM `myhobby`.category");
 
         echo "";
         echo "<table id='hobbies' class='table table-dark table-hover'>";
@@ -34,7 +34,7 @@ class Admin extends Database {
     public function delete_category()
     {
         $id=$_GET['id'];
-        $delete=$this->connection->query("DELETE FROM `myhobby-test`.category WHERE category_id='$id'");
+        $delete=$this->connection->query("DELETE FROM `myhobby`.category WHERE category_id='$id'");
         if(!$delete)
         {
             echo "Not deleted";
@@ -49,7 +49,7 @@ class Admin extends Database {
     public function delete_subcategory()
     {
         $id=$_GET['id'];
-        $delete=$this->connection->query("DELETE FROM `myhobby-test`.sub_category WHERE subcategory_id='$id'");
+        $delete=$this->connection->query("DELETE FROM `myhobby`.sub_category WHERE subcategory_id='$id'");
         if(!$delete)
         {
             echo "Not deleted";
@@ -66,7 +66,7 @@ class Admin extends Database {
         $id=$_GET['id'];
         if(!empty($btn_update))
         {
-            $update=$this->connection->query("UPDATE `myhobby-test`.category SET category_name='$new_name' WHERE category_id='$id'");
+            $update=$this->connection->query("UPDATE `myhobby`.category SET category_name='$new_name' WHERE category_id='$id'");
             if(!$update)
             {
                 echo "Not updated";
@@ -85,7 +85,7 @@ class Admin extends Database {
         $id=$_GET['id'];
         if(!empty($btn_update))
         {
-            $update=$this->connection->query("UPDATE `myhobby-test`.sub_category SET sub_category_name='$new_name' WHERE subcategory_id='$id'");
+            $update=$this->connection->query("UPDATE `myhobby`.sub_category SET sub_category_name='$new_name' WHERE subcategory_id='$id'");
             if(!$update)
             {
                 echo "Not updated";
@@ -103,7 +103,7 @@ class Admin extends Database {
     {
         if(!empty($btn_insert))
         {
-            $insert=$this->connection->query("INSERT INTO `myhobby-test`.category (category_name) VALUE ('$new_name')");
+            $insert=$this->connection->query("INSERT INTO `myhobby`.category (category_name) VALUE ('$new_name')");
             if(!$insert)
             {
                 echo "Not inserted";
@@ -122,7 +122,7 @@ class Admin extends Database {
         if(!empty($btn_insert))
         {
             $category_id=$_GET['id'];
-            $insert=$this->connection->query("INSERT INTO `myhobby-test`.sub_category (id_category,sub_category_name) VALUE ('$category_id','$new_name')");
+            $insert=$this->connection->query("INSERT INTO `myhobby`.sub_category (id_category,sub_category_name) VALUE ('$category_id','$new_name')");
             if(!$insert)
             {
                 echo "Not inserted";
@@ -138,7 +138,7 @@ class Admin extends Database {
 
     public function select_users()
     {
-        $list1=$this->connection->query("SELECT * FROM `myhobby-test`.users");
+        $list1=$this->connection->query("SELECT * FROM `myhobby`.users");
 
         echo "<table class='table table-dark table-hover'>";
         echo "<tr><td colspan='4'><h2>Manage users here:</h2></td></tr>";
@@ -156,7 +156,7 @@ class Admin extends Database {
     public function delete_users()
     {
         $id=$_GET['id'];
-        $delete=$this->connection->query("DELETE FROM `myhobby-test`.users WHERE user_id='$id'");
+        $delete=$this->connection->query("DELETE FROM `myhobby`.users WHERE user_id='$id'");
         if(!$delete)
         {
             echo "Not deleted";
@@ -173,7 +173,7 @@ class Admin extends Database {
         $id=$_GET['id'];
         if(!empty($btn_update))
         {
-            $update=$this->connection->query("UPDATE `myhobby-test`.users SET first_name='$new_first_name', last_name='$new_last_name' WHERE user_id='$id'");
+            $update=$this->connection->query("UPDATE `myhobby`.users SET first_name='$new_first_name', last_name='$new_last_name' WHERE user_id='$id'");
             if(!$update)
             {
                 echo "Not updated";

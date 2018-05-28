@@ -41,6 +41,9 @@
                         <input type="date" class="form-control" id="date" name="date_of_birth">
                         <div id="birth_error"></div>
                     </div>
+                    <div class="form-group" id="state_div">
+                        <input type="text" class="form-control" id="state" name="state" placeholder="State"> 
+                    </div>
                     <div class="form-check">
                         <label class="form-check form-check-inline">
                             <input type="radio" class="form-check-input" id="radio1" name="sex" value="Male" checked="checked"> Male
