@@ -22,7 +22,7 @@ class Functions
     {
         if(isset($_SESSION['user_session']))
         {
-            echo "<h4 style='margin-left: 10px'><span class='badge badge-dark'> Hello {$_COOKIE['first_name']} </span></h4>";
+            echo "<h4 style='margin-left: 10px'><span class='badge badge-dark'> Hello {$_SESSION['first_name']} </span></h4>";
         }
     }
 

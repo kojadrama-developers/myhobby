@@ -62,6 +62,7 @@ class USER
                    $stmt1=$this->connection->prepare("UPDATE `myhobby`.users_info SET first_log=0 WHERE user_id IN (SELECT user_id FROM `myhobby`.users WHERE email=:email)");
                    $stmt1->execute(array(':email'=>$email));
                    $_SESSION['user_session'] = $userRow['user_id'];
+                   $_SESSION['first_name']=$userRow1['first_name'];
                    setcookie("first_name",$userRow1['first_name'],time()*3600,"/", false, false);
                    return true;
                }
@@ -69,6 +70,7 @@ class USER
                {
                    $this->redirect("../index.php");
                    $_SESSION['user_session']=$userRow['user_id'];
+                   $_SESSION['first_name']=$userRow1['first_name'];
                    setcookie("first_name",$userRow1['first_name'],time()*3600,"/", false, false);
                    return true;
                }
