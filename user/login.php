@@ -7,7 +7,10 @@ if($login->is_loggedin()!="")
 {
     $login->redirect('../index.php');
 }
-if(isset($_POST['login_btn']))
+if($_POST['email']=="" and ($_POST['password'])==""){
+    $login->redirect("../index.php");
+}
+elseif(isset($_POST['login_btn']))
 {
     $email=strip_tags($_POST['email']);
     $password=strip_tags($_POST['password']);
