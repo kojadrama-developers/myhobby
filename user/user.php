@@ -5,6 +5,7 @@ require "../includes/db_config.php";
 class USER
 {
     private $connection;
+
     //connect to the database
     public function __construct()
     {
@@ -12,12 +13,14 @@ class USER
         $db=$database->dbConnection();
         $this->connection=$db;
     }
+
     //shortens code for running queries
     public function runQuery($sql)
     {
         $stmt=$this->connection->prepare($sql);
         return $stmt;
     }
+
     //register users
     public function register($firstName,$lastName,$email,$password,$date,$sex,$state)
     {
@@ -25,8 +28,8 @@ class USER
         {
             //password coding and query for new user
             $new_password=password_hash($password,PASSWORD_DEFAULT);
-            $stmt=$this->connection->prepare("INSERT INTO users (email,password) VALUES ('$email','$new_password');
-                                              INSERT INTO users_info (user_id,first_name,last_name,date_of_birth,sex,`state`) VALUES (LAST_INSERT_ID(),'$firstName','$lastName','$date','$sex','$state');");
+            $stmt=$this->connection->prepare("INSERT INTO users (email,password) VALUES ('$email','$new_password');INSERT INTO users_info (user_id,first_name,last_name,date_of_birth,sex,`state`) VALUES (LAST_INSERT_ID(),'$firstName','$lastName','$date','$sex','$state');");
+            
             //binding parameters to stmt
             $stmt->bindparam("email",$email);
             $stmt->bindparam("password",$new_password);
@@ -36,6 +39,7 @@ class USER
             $stmt->bindparam("sex",$sex);
             $stmt->bindparam("state",$state);
 
+            //execute the query
             $stmt->execute();
 
             return $stmt;
@@ -44,6 +48,7 @@ class USER
             echo $e->getMessage();
         }
     }
+
     //login users
     public function doLogin($email,$password)
     {
@@ -53,14 +58,17 @@ class USER
            $stmt=$this->connection->prepare("SELECT * FROM `myhobby`.users WHERE email=:email");
            $stmt->execute(array(':email'=>$email));
            $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
+
            //find other info about same user by user_id
            $stmt1=$this->connection->prepare("SELECT * FROM `myhobby`.users_info WHERE user_id IN (SELECT user_id FROM `myhobby`.users WHERE email=:email)");
            $stmt1->execute(array(':email'=>$email));
            $userRow1=$stmt1->fetch(PDO::FETCH_ASSOC);
+
            //for cookie, sets time zone to Belgrade
            $date1=new DateTime('now', new DateTimeZone('Europe/Belgrade') );
            $date1->setTimeZone(new DateTimeZone('Europe/Belgrade'));
            $date=$date1->format('H-i-s');
+
            //if there is user with that email in database...
            if($stmt->rowCount()==1)
            {
@@ -71,9 +79,11 @@ class USER
                    $this->redirect("hobby.php");
                    $stmt1=$this->connection->prepare("UPDATE `myhobby`.users_info SET first_log=0 WHERE user_id IN (SELECT user_id FROM `myhobby`.users WHERE email=:email)");
                    $stmt1->execute(array(':email'=>$email));
+
                    //make 2 $_SESSION, one with user_id and one with first_name (both are taken from database)
                    $_SESSION['user_session'] = $userRow['user_id'];
                    $_SESSION['first_name']=$userRow1['first_name'];
+
                    //make 2 cookies, one with first_name (from database, maybe not so secure) and one with time when user logged in
                    setcookie("First_name",$userRow1['first_name'],time()*3600,"/", false, false);
                    setcookie("Login_time",$date,time()+84600,"/",false,false);
@@ -84,9 +94,11 @@ class USER
                {
                    //go to index.php page
                    $this->redirect("../index.php");
+
                    //same as in row 74
                    $_SESSION['user_session']=$userRow['user_id'];
                    $_SESSION['first_name']=$userRow1['first_name'];
+
                    //same as in row 77
                    setcookie("First_name",$userRow1['first_name'],time()*3600,"/", false, false);
                    setcookie("Login_time",$date,time()+84600,"/",false,false);
@@ -103,6 +115,7 @@ class USER
             echo $e->getMessage();
         }
     }
+
     //check if user is logged in
     public function is_loggedin()
     {   
@@ -113,15 +126,18 @@ class USER
         }
 
     }
+
     //for redirecting
     public function redirect($url)
     {
         header("Location: $url");
     }
+
     //log out user
     public function doLogout()
     {
         $_SESSION=array();
+        
         //delete cookie
         setcookie("Login_time",$date,time()-1,"/",false,false);
         session_destroy();
