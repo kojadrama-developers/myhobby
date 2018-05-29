@@ -13,7 +13,7 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
 
 if($row['email']!=$email)
 {
-    $error[]="Sorry, email already taken!";
+    echo "This email doesn't exist!!!";
     $login->redirect("../index.php");
 }
 else if($_POST['email']=="" or ($_POST['password'])==""){
