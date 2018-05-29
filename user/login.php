@@ -7,19 +7,20 @@ if($login->is_loggedin()!="")
 {
     $login->redirect('../index.php');
 }
-$stmt=$login->runQuery("SELECT email FROM `myhobby`.users");
+$inserted_email=$_POST['email'];
+$notGood=$login->redirect("../index.php");
+$stmt=$login->runQuery("SELECT email FROM `myhobby`.users WHERE email='$inserted_email'");
 $stmt->execute(array(':email'=>$email));
 $row=$stmt->fetch(PDO::FETCH_ASSOC);
 
-if($row['email']!=$email)
-{
-    echo "This email doesn't exist!!!";
-    $login->redirect("../index.php");
-}
-else if($_POST['email']=="" or ($_POST['password'])==""){
+if($_POST['email']=="" or ($_POST['password'])==""){
     $error="All fields are required";
     echo $error;
-    $login->redirect("../index.php");
+    return $notGood;
+}
+elseif($_POST['email']!=$row['email']){
+    echo "This email doesn't exist!";
+    return $notGood;
 }
 elseif(isset($_POST['login_btn']))
 {
