@@ -14,8 +14,7 @@ $stmt->execute(array(':email'=>$email));
 $row=$stmt->fetch(PDO::FETCH_ASSOC);
 
 if($_POST['email']=="" or ($_POST['password'])==""){
-    $error="All fields are required";
-    echo $error;
+    echo "All fields are required";
     return $notGood;
 }
 elseif($_POST['email']!=$row['email']){
