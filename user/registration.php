@@ -2,15 +2,17 @@
 <?php
 session_start();
 require "user.php";
+//create new object for class USER() 
 $user=new USER();
-
+//checks if user is logged in
 if($user->is_loggedin()!="")
 {
     $user->redirect("../index.php");
 }
-
+//if registration button is clicked
 if(isset($_POST['register_btn']))
 {
+    //receives information from registration form
     $firstName=strip_tags($_POST['first_name']);
     $lastName=strip_tags($_POST['last_name']);
     $email=strip_tags($_POST['email']);
@@ -18,9 +20,9 @@ if(isset($_POST['register_btn']))
     $date=strip_tags($_POST['date_of_birth']);
     $sex=strip_tags($_POST['sex']);
     $state=strip_tags($_POST['state']);
-
+    //shortens redirection
     $notGood=$user->redirect('../index.php');
-
+    //if something from form is empthy give error and return to index.php
     if($firstName==""){
         $error[]="Please provide your first name!";
         return $notGood;
@@ -57,10 +59,11 @@ if(isset($_POST['register_btn']))
     {
         try
         {
+            //find every email in database
             $stmt=$user->runQuery("SELECT email FROM `myhobby`.users");
             $stmt->execute(array(':email'=>$email));
             $row=$stmt->fetch(PDO::FETCH_ASSOC);
-
+            //if inserted email is equal to something in database then give error else register user
             if($row['email']==$email)
             {
                 $error[]="Sorry, email already taken!";
