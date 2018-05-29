@@ -7,7 +7,9 @@ if($login->is_loggedin()!="")
 {
     $login->redirect('../index.php');
 }
-if($_POST['email']=="" and ($_POST['password'])==""){
+if($_POST['email']=="" or ($_POST['password'])==""){
+    $error="All fields are required";
+    echo $error;
     $login->redirect("../index.php");
 }
 elseif(isset($_POST['login_btn']))
