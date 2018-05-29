@@ -54,6 +54,9 @@ class USER
            $stmt1=$this->connection->prepare("SELECT * FROM `myhobby`.users_info WHERE user_id IN (SELECT user_id FROM `myhobby`.users WHERE email=:email)");
            $stmt1->execute(array(':email'=>$email));
            $userRow1=$stmt1->fetch(PDO::FETCH_ASSOC);
+           $date1=new DateTime('now', new DateTimeZone('Europe/Belgrade') );
+           $date1->setTimeZone(new DateTimeZone('Europe/Belgrade'));
+           $date=$date1->format('H-i-s');
            if($stmt->rowCount()==1)
            {
                if($userRow1['first_log']==1 and password_verify($password,$userRow['password']))
@@ -63,7 +66,8 @@ class USER
                    $stmt1->execute(array(':email'=>$email));
                    $_SESSION['user_session'] = $userRow['user_id'];
                    $_SESSION['first_name']=$userRow1['first_name'];
-                   setcookie("first_name",$userRow1['first_name'],time()*3600,"/", false, false);
+                   setcookie("First_name",$userRow1['first_name'],time()*3600,"/", false, false);
+                   setcookie("Login_time",$date,time()+84600,"/",false,false);
                    return true;
                }
                else if($userRow1['first_log']==0 and password_verify($password,$userRow['password']))
@@ -71,7 +75,8 @@ class USER
                    $this->redirect("../index.php");
                    $_SESSION['user_session']=$userRow['user_id'];
                    $_SESSION['first_name']=$userRow1['first_name'];
-                   setcookie("first_name",$userRow1['first_name'],time()*3600,"/", false, false);
+                   setcookie("First_name",$userRow1['first_name'],time()*3600,"/", false, false);
+                   setcookie("Login_time",$date,time()+84600,"/",false,false);
                    return true;
                }
                else
@@ -103,6 +108,7 @@ class USER
     public function doLogout()
     {
         $_SESSION=array();
+        setcookie("Login_time",$date,time()-1,"/",false,false);
         session_destroy();
     }
 }
