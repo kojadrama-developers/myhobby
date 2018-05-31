@@ -77,7 +77,7 @@ class USER
                {
                    //go to page hooby.php, update first_log to 0 for that user
                    $this->redirect("hobby.php");
-                   $stmt1=$this->connection->prepare("UPDATE `myhobby`.users_info SET first_log=0 WHERE user_id IN (SELECT user_id FROM `myhobby`.users WHERE email=:email)");
+                   //$stmt1=$this->connection->prepare("UPDATE `myhobby`.users_info SET first_log=0 WHERE user_id IN (SELECT user_id FROM `myhobby`.users WHERE email=:email)");
                    $stmt1->execute(array(':email'=>$email));
 
                    //make 2 $_SESSION, one with user_id and one with first_name (both are taken from database)
