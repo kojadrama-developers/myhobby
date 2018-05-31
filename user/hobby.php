@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JavaScript</title>
+    <title>Choose hobby</title>
     <style type="text/css">
 
         #sub_category {
@@ -12,54 +12,55 @@
 label {
     font-weight: bold;
 }
-        #label2 {
+        #sub_label {
             display:none;
         }
     </style>
 
 <?php
 require 'user.php';
-
+//create new object for class USER() 
 $hobby=new USER();
 
-$category = array();
+//make category array
+$category=array();
 
-$sql=$hobby->runQuery("SELECT category_id,category_name FROM category");
-$sql->execute();
+//take category_id and category_name from database
+$stmt=$hobby->runQuery("SELECT category_id, category_name FROM category");
+$stmt->execute();
 
-if ($sql->rowCount()>0)
-{
-	while ($record=$sql->fetch(PDO::FETCH_ASSOC))
-    {
-		$category[$record['category_id']] = $record['category_name'];    	
+//populate category array with results
+if($stmt->rowCount()>0){
+    while($row=$stmt->fetch(PDO::FETCH_BOTH)){
+        $category[$row['category_id']]=$row['category_name'];
     }
 }
 
-$sub_category = array();
+//make sub_category array
+$sub_category=array();
 
-foreach ($category as $k=>$v)
-{
-	$sql=$hobby->runQuery("SELECT sub_category_name FROM sub_category WHERE category_id = '$k'");
-	$sql->execute();
+foreach($category as $cat_id=>$sub_id){
+    //take sub_category_name from db
+    $stmt1=$hobby->runQuery("SELECT sub_category_name FROM sub_category WHERE category_id='$cat_id'");
+    $stmt1->execute();
 
-	if ($sql->rowCount()>0)
-	{
-		while ($record=$sql->fetch(PDO::FETCH_ASSOC))
-    	{
-			$sub_category["$v"][] = $record['sub_category_name'];    	
-	    }
-	}
+    //populate sub_category array with results
+    if($stmt1->rowCount()>0){
+        while($row1=$stmt1->fetch(PDO::FETCH_BOTH)){
+            $sub_category[$sub_id][]=$row1['sub_category_name'];
+        }
+    }
 }
 ?>
-<script type="text/javascript">
+<script>
+//js for both selects
 var sub_category=<?php echo json_encode($sub_category) ?>;
 
-        function myFunction(obj)
-        {
+        //function which checks if you chose something from first select and shows/hides the other one 
+        function chooseHobby(element){
             var text = "";
-            var value = obj.value;
-            if(value!='choose')
-            {
+            var value = element.value;
+            if(value!='choose'){
                 document.getElementById('sub_category').style.display='inline';
                 
 				for(var x in sub_category[value])
@@ -67,34 +68,36 @@ var sub_category=<?php echo json_encode($sub_category) ?>;
 
                 document.getElementById('sub_category').innerHTML = text;
                 document.getElementById('sub_category').disabled=false;
-                document.getElementById('label2').style.display='inline';
+                document.getElementById('sub_label').style.display='inline';
 
             }
-            else
-            {
+            else{
                 document.getElementById('sub_category').disabled=true;
                 document.getElementById('sub_category').style.display='none';
-                document.getElementById('label2').style.display='none';
+                document.getElementById('sub_label').style.display='none';
             }
+
         }
+        //down there is html, nothing special...
     </script>
 
 </head>
 <body>
 <form name="category_form">
-    <label>category: </label><select name="category" onchange="myFunction(this)">
-        <script tpye="text/javascript">
-        document.write('<option value="choose">choose</option>');
-        for(var x in sub_category)
+    <label id="cat_label">Hobby category:</label>
+    <select name="category" onchange="chooseHobby(this)">
+    <script>
+    document.write('<option value="choose">choose</option>');
+    for(var x in sub_category){
         document.write('<option value="'+x+'">'+x+'</option>');
-        </script>
-
+    }
+    </script>
     </select>
-    <label id="label2">sub category: </label>
+    <label id="sub_label">Hobby subcategory: </label>
     <select name="sub_category" id="sub_category">
 
     </select>
-    <input type="submit" value="send" />
+    <input type="submit"/>
 </form>
 </body>
 </html>
