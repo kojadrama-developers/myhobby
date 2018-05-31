@@ -78,10 +78,26 @@ var sub_category=<?php echo json_encode($sub_category) ?>;
                 document.getElementById('sub_label').style.display='none';
             }
         }
-        //down there is html, nothing special...
     </script>
-
 </head>
+<?php
+//checks if user is logged in and puts users id in variable $user_id
+if($hobby->is_loggedin()!=""){
+    $user_id=$_SESSION['user_session'];
+}
+
+//finds in db if user has already choosen a hobby 
+$stmt=$hobby->runQuery("SELECT user_id FROM user_category WHERE user_id='$user_id'");
+$stmt->execute();
+$row=$stmt->fetch(PDO::FETCH_ASSOC);
+
+//if yes, user gets this message
+if($row['user_id']==$user_id){
+    echo "You already chose your hobby!";
+}
+//else, user can choose a hobby
+else{
+?>
 <body>
 <form name="category_form" action="gethobby.php" method="POST">
     <label id="cat_label">Hobby category:</label>
@@ -100,4 +116,5 @@ var sub_category=<?php echo json_encode($sub_category) ?>;
     <input type="submit"/>
 </form>
 </body>
+<?php } ?>
 </html>

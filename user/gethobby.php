@@ -10,5 +10,10 @@ if(isset($_POST['sub_category'])){
     $hobby=$_POST['sub_category'];
 }
 
-//execute the function to insert the hobby in db
-$gethobby->yourHobby($hobby);
+if($hobby==""){
+    $gethobby->redirect("hobby.php");
+}
+else{
+    //execute the function to insert the hobby in db
+    $gethobby->yourHobby($hobby);
+}
