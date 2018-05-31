@@ -77,7 +77,7 @@ class USER
                {
                    //go to page hooby.php, update first_log to 0 for that user
                    $this->redirect("hobby.php");
-                   //$stmt1=$this->connection->prepare("UPDATE `myhobby`.users_info SET first_log=0 WHERE user_id IN (SELECT user_id FROM `myhobby`.users WHERE email=:email)");
+                   //$stmt1=$this->connection->prepare("");
                    $stmt1->execute(array(':email'=>$email));
 
                    //make 2 $_SESSION, one with user_id and one with first_name (both are taken from database)
@@ -141,5 +141,20 @@ class USER
         //delete cookie
         setcookie("Login_time",$date,time()-1,"/",false,false);
         session_destroy();
+    }
+
+    //inserts choosen hobby in db for that user
+    public function yourHobby($hobby){
+        if(isset($_SESSION['user_session'])){
+            $user_id=$_SESSION['user_session'];
+        }
+
+        $stmt=$this->connection->prepare("INSERT INTO `myhobby`.user_category (user_id,category) VALUES ('$user_id','$hobby')");
+        $stmt->execute();
+
+        $stmt1=$this->connection->prepare("UPDATE `myhobby`.users_info SET first_log=0 WHERE user_id='$user_id'");
+        $stmt1->execute();
+
+        $this->redirect("../index.php");
     }
 }

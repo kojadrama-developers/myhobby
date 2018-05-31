@@ -18,6 +18,7 @@ label {
     </style>
 
 <?php
+session_start();
 require 'user.php';
 //create new object for class USER() 
 $hobby=new USER();
@@ -76,14 +77,14 @@ var sub_category=<?php echo json_encode($sub_category) ?>;
                 document.getElementById('sub_category').style.display='none';
                 document.getElementById('sub_label').style.display='none';
             }
-
+            console.log(document.getElementById('sub_category').value);
         }
         //down there is html, nothing special...
     </script>
 
 </head>
 <body>
-<form name="category_form">
+<form name="category_form" action="gethobby.php" method="POST">
     <label id="cat_label">Hobby category:</label>
     <select name="category" onchange="chooseHobby(this)">
     <script>
