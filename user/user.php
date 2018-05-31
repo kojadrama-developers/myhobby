@@ -77,8 +77,6 @@ class USER
                {
                    //go to page hooby.php, update first_log to 0 for that user
                    $this->redirect("hobby.php");
-                   //$stmt1=$this->connection->prepare("");
-                   $stmt1->execute(array(':email'=>$email));
 
                    //make 2 $_SESSION, one with user_id and one with first_name (both are taken from database)
                    $_SESSION['user_session'] = $userRow['user_id'];
@@ -145,16 +143,20 @@ class USER
 
     //inserts choosen hobby in db for that user
     public function yourHobby($hobby){
+        //gets id for currently logged in user
         if(isset($_SESSION['user_session'])){
             $user_id=$_SESSION['user_session'];
         }
 
+        //inserts hobby for this user
         $stmt=$this->connection->prepare("INSERT INTO `myhobby`.user_category (user_id,category) VALUES ('$user_id','$hobby')");
         $stmt->execute();
 
+        //changes his first log in status in db
         $stmt1=$this->connection->prepare("UPDATE `myhobby`.users_info SET first_log=0 WHERE user_id='$user_id'");
         $stmt1->execute();
 
+        //redirects to index.php page
         $this->redirect("../index.php");
     }
 }

@@ -77,7 +77,6 @@ var sub_category=<?php echo json_encode($sub_category) ?>;
                 document.getElementById('sub_category').style.display='none';
                 document.getElementById('sub_label').style.display='none';
             }
-            console.log(document.getElementById('sub_category').value);
         }
         //down there is html, nothing special...
     </script>
