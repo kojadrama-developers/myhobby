@@ -159,4 +159,28 @@ class USER
         //redirects to index.php page
         $this->redirect("../index.php");
     }
+
+    //uploads image in database
+    public function imageUpload($data,$name){
+        $user_id=$_SESSION['user_session'];
+       
+        $stmt=$this->connection->prepare("INSERT INTO `myhobby`.image (user_id,image,name) VALUES ('$user_id',?,?)");
+
+        $stmt->bindparam(1,$data);
+        $stmt->bindparam(2,$name);
+
+        $stmt->execute();
+    }
+
+    //if user has a picture this function will change it
+    public function changeImage($data,$name){
+        $user_id=$_SESSION['user_session'];
+       
+        $stmt=$this->connection->prepare("UPDATE `myhobby`.image SET image=? ,name=? WHERE user_id='$user_id'");
+
+        $stmt->bindparam(1,$data);
+        $stmt->bindparam(2,$name);
+
+        $stmt->execute();
+    }
 }
